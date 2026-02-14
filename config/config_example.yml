@@ -1,0 +1,28 @@
+## Scenario settings
+fs: 16000 # [Hz]
+T: 10 # [s]
+SNR: 20 # [dB]
+
+audio_base: "/path/to/directory"
+audio_sources:
+  - "source_1"
+  - "source_2"
+
+rir_base: "/path/to/directory"
+rir_length: 32000 # in samples
+early_length: 0.02 # [s]
+scenario: "scenario_name"
+sources:
+  - "source_1"
+  - "source_2"
+feedback_source: "feedback_source_1"
+mics:
+  - "mic_1"
+  - "mic_2"
+
+## Processing settings
+N: 512
+overlap: 0.5 # Do not set `hop` directly; it is overwritten by `N * (1-overlap)`.
+Delta: 1
+K: 4
+delta_L: 0
